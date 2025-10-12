@@ -3747,3 +3747,10 @@ body::before {
         display: none;
     }
 }
+
+/* Small asterisk style */
+.small-asterisk {
+    font-size: 0.6em;
+    vertical-align: super;
+    line-height: 0;
+}
