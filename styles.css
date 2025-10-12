@@ -3754,3 +3754,9 @@ body::before {
     vertical-align: super;
     line-height: 0;
 }
+
+/* Small note text style */
+.small-note {
+    font-size: 0.8em;
+    opacity: 0.85;
+}
