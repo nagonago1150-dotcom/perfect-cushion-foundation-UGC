@@ -140,7 +140,7 @@ body {
     max-width: 100%;
 }
 
-/* Mobile break line - hidden by default */
+/* Mobile break line - hidden by default on desktop */
 .mobile-br {
     display: none;
 }
@@ -194,6 +194,18 @@ body {
     .hero, .rating-stats, .user-portraits, .faq, .cta-section {
         width: 100%;
         overflow-x: hidden;
+    }
+
+    /* Show mobile break lines on mobile */
+    .mobile-br {
+        display: inline;
+    }
+
+    /* Adjust note font size for mobile */
+    .brand-note,
+    .benefit-note {
+        font-size: 0.7rem;
+        line-height: 1.3;
     }
 }
 
@@ -602,16 +614,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes underlineGlow {
-    0%, 100% { 
-        box-shadow: 
+    0%, 100% {
+        box-shadow:
             0 2px 8px rgba(218, 165, 32, 0.3),
             0 0 20px rgba(255, 255, 255, 0.2);
     }
-    50% { 
-        box-shadow: 
+    50% {
+        box-shadow:
             0 2px 12px rgba(218, 165, 32, 0.5),
             0 0 30px rgba(255, 255, 255, 0.3);
     }
+}
+
+.brand-note,
+.benefit-note {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.brand-note {
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-note {
+    margin-top: 8px;
 }
 
 .pc-br {
