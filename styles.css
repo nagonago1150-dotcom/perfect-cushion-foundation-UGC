@@ -987,6 +987,16 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .event-intro p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        font-weight: 400;
+        padding: 0 var(--spacing-xs);
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
 .event-images-grid {
     display: grid;
     grid-template-columns: 1fr;
