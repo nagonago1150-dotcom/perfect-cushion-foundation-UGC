@@ -1061,11 +1061,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+
     .features-image-container {
         padding: var(--spacing-sm);
         margin: var(--spacing-lg) 0;
     }
-    
+
     .features-image {
         border-radius: 12px;
     }
