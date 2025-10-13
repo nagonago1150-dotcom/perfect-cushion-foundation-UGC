@@ -471,14 +471,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-description-simple {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 0 var(--spacing-lg) 0;
     text-align: center;
     position: relative;
     background: rgba(255, 255, 255, 0.98);
     border-radius: 24px;
     border: 2px solid rgba(139, 69, 19, 0.15);
-    padding: var(--spacing-xl) var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-xl);
     box-shadow:
         0 4px 16px rgba(139, 69, 19, 0.1),
         0 8px 32px rgba(0, 0, 0, 0.05);
@@ -566,13 +566,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-benefit {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #3E2723;
     line-height: 1.4;
     margin: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     position: relative;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .main-benefit::after {
