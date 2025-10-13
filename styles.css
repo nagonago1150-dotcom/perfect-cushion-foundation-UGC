@@ -3758,8 +3758,9 @@ body::before {
     line-height: 0;
 }
 
-/* Small note text style */
+/* Small note text style - same size as asterisk */
 .small-note {
-    font-size: 0.8em;
+    font-size: 0.6em;
     opacity: 0.85;
+    line-height: 1.4;
 }
