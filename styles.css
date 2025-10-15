@@ -21,9 +21,10 @@
     --shadow-color: rgba(62, 39, 35, 0.15);
     
     /* Typography */
-    --font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', sans-serif;
+    --font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', '游明朝', 'Noto Sans JP', serif;
+    --font-family-accent: 'Playfair Display', 'Noto Serif JP', serif;
     --font-size-base: 18px;
-    --line-height-base: 1.7;
+    --line-height-base: 1.8;
     
     /* Spacing */
     --spacing-xs: 8px;
@@ -169,19 +170,21 @@ body {
         box-sizing: border-box;
     }
     
-    /* PR Label Mobile Styles */
+    /* PR Label Mobile Styles - very subtle */
     .pr-label {
         top: 15px;
         right: 15px;
-        padding: 6px 12px;
-        border-radius: 16px;
-        opacity: 0.8;
+        padding: 5px 10px;
+        border-radius: 14px;
+        opacity: 0.5;
     }
-    
+
     .pr-label span {
-        font-size: 0.75rem;
-        letter-spacing: 0.2px;
-        opacity: 0.7;
+        font-size: 0.7rem;
+        letter-spacing: 0.1px;
+        opacity: 0.2;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(139, 69, 19, 0.03);
     }
     
     /* Ensure all sections stay within viewport */
@@ -223,19 +226,21 @@ body {
         overflow-x: hidden;
     }
     
-    /* PR Label for very small screens */
+    /* PR Label for very small screens - much more subtle */
     .pr-label {
         top: 10px;
         right: 10px;
-        padding: 5px 10px;
-        border-radius: 14px;
-        opacity: 0.75;
+        padding: 4px 8px;
+        border-radius: 12px;
+        opacity: 0.4;
     }
-    
+
     .pr-label span {
-        font-size: 0.7rem;
-        letter-spacing: 0.1px;
-        opacity: 0.6;
+        font-size: 0.65rem;
+        letter-spacing: 0.05px;
+        opacity: 0.15;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(139, 69, 19, 0.02);
     }
     
     /* Ensure no horizontal scroll on small screens */
@@ -252,30 +257,26 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.6;
     margin-bottom: var(--spacing-md);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    letter-spacing: 0.08em;
 }
 
 .section-title {
+    font-family: var(--font-family);
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     text-align: center;
     margin-bottom: var(--spacing-xl);
-    background: linear-gradient(135deg, 
-        var(--text-dark) 0%, 
-        var(--primary-color) 50%, 
-        var(--text-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-dark);
     position: relative;
     padding-bottom: var(--spacing-lg);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    letter-spacing: 0.1em;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -488,12 +489,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     opacity: 0;
     animation: luxuryFadeIn 1.2s ease-out 0.3s forwards;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    font-family: var(--font-family);
 }
 
 .hero-main {
     display: block;
-    font-weight: 700;
+    font-weight: 500;
+    font-family: var(--font-family);
     background: linear-gradient(135deg, #8B6F47 0%, #C9A96E 25%, #D4AF6A 50%, #C9A96E 75%, #8B6F47 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -502,8 +505,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 100%;
     font-size: 2.8rem;
-    line-height: 1.4;
-    letter-spacing: 0.08em;
+    line-height: 1.6;
+    letter-spacing: 0.12em;
     opacity: 0;
     animation: luxurySlideUp 1.4s ease-out 0.6s forwards, luxuryShimmer 4s ease-in-out 2s infinite;
     text-shadow: 0 2px 20px rgba(201, 169, 110, 0.3);
