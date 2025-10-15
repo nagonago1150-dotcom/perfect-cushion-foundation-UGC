@@ -432,17 +432,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-title {
     font-size: 4rem;
     margin: 0 0 var(--spacing-md) 0;
-    background: linear-gradient(135deg, 
-        var(--text-dark) 0%, 
-        var(--primary-color) 30%, 
-        var(--accent-color) 70%, 
-        var(--text-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-dark);
     font-weight: 800;
     letter-spacing: -0.01em;
-    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     width: 100%;
     max-width: 100%;
