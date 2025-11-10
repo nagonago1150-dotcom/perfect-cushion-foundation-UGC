@@ -3922,7 +3922,7 @@ body::before {
 .testimonial-card {
     background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 100%);
     border-radius: 20px;
-    padding: 35px 30px;
+    padding: 25px 20px;
     box-shadow: 0 8px 30px rgba(139, 69, 19, 0.12);
     border: 2px solid rgba(218, 165, 32, 0.15);
     position: relative;
