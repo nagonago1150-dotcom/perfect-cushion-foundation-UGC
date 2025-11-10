@@ -3914,7 +3914,7 @@ body::before {
 /* Enhanced Testimonials Styling */
 .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     gap: 20px;
