@@ -3838,3 +3838,212 @@ body::before {
     opacity: 0.85;
     line-height: 1.4;
 }
+/* Enhanced Features List Styling */
+.features-list {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.1);
+    border: 2px solid rgba(218, 165, 32, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.features-list::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(218, 165, 32, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-left: 4px solid transparent;
+}
+
+.feature-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.95);
+    border-left-color: var(--gold-accent);
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.15);
+}
+
+.feature-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.feature-check {
+    color: var(--gold-accent);
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 24px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.feature-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.features-note {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(218, 165, 32, 0.2);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Enhanced Testimonials Styling */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 100%);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 30px rgba(139, 69, 19, 0.12);
+    border: 2px solid rgba(218, 165, 32, 0.15);
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 80px;
+    color: rgba(218, 165, 32, 0.15);
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(139, 69, 19, 0.2);
+    border-color: var(--gold-accent);
+}
+
+.portrait-quote {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.portrait-detail {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.testimonial-disclaimer {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.testimonial-disclaimer p {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .features-list {
+        padding: 30px 20px;
+        margin: 20px 0;
+    }
+    
+    .feature-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-text {
+        font-size: 15px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 25px 20px;
+    }
+    
+    .portrait-quote {
+        font-size: 16px;
+    }
+    
+    .portrait-detail {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-list {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+    
+    .feature-item {
+        flex-direction: row;
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .feature-check {
+        font-size: 20px;
+    }
+    
+    .feature-text {
+        font-size: 14px;
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+    
+    .testimonial-card::before {
+        font-size: 60px;
+        top: 10px;
+        left: 15px;
+    }
+}
