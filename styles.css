@@ -3969,8 +3969,8 @@ body::before {
 }
 
 .testimonial-disclaimer {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 25px;
+    padding: 15px 20px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
     border: 1px solid rgba(139, 69, 19, 0.1);
