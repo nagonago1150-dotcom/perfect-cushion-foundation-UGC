@@ -4050,3 +4050,9 @@ body::before {
         left: 15px;
     }
 }
+
+/* Smaller font for longer testimonials */
+.portrait-detail-small {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
