@@ -3913,9 +3913,11 @@ body::before {
 
 /* Enhanced Testimonials Styling */
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
     align-items: start;
     margin-top: 40px;
 }
