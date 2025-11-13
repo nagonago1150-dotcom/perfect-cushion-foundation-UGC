@@ -4056,3 +4056,24 @@ body::before {
     font-size: 12px !important;
     line-height: 1.6 !important;
 }
+
+/* Product Image in CTA Section */
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-lg) 0;
+}
+
+.cta-product-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    .cta-product-image {
+        max-width: 100%;
+    }
+}
