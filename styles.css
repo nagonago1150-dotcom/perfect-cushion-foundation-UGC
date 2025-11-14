@@ -1957,38 +1957,97 @@ details[open] .faq-question::after {
 
 .price-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     flex-wrap: wrap;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xl);
+    position: relative;
 }
 
-.regular-price-inline {
-    font-size: 1rem;
-    color: var(--text-dark);
+.discount-banner {
+    background: linear-gradient(135deg,
+        #D4AF37 0%,
+        #FFD700 50%,
+        #D4AF37 100%);
+    padding: var(--spacing-lg) var(--spacing-xxl);
+    border-radius: 16px;
+    box-shadow:
+        0 8px 32px rgba(212, 175, 55, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.discount-banner:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.discount-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 70%
+    );
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+.discount-label-top {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #654321;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.discount-percentage {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        -1px -1px 2px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.regular-price-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.regular-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
     font-weight: 500;
 }
 
-.old-price-inline {
-    font-size: 1.4rem;
+.regular-amount {
+    font-size: 1.8rem;
     text-decoration: line-through;
     color: var(--text-light);
-    opacity: 0.7;
-    margin-left: var(--spacing-xs);
-}
-
-.discount-badge {
-    background: linear-gradient(135deg,
-        rgba(218, 165, 32, 0.9) 0%,
-        rgba(184, 134, 11, 0.95) 100%);
-    color: white;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 16px rgba(218, 165, 32, 0.4);
-    letter-spacing: 0.5px;
+    opacity: 0.6;
+    font-weight: 600;
 }
 
 .special-price-main {
@@ -4214,20 +4273,29 @@ body::before {
     .price-header {
         flex-direction: column;
         text-align: center;
-        gap: var(--spacing-sm);
+        gap: var(--spacing-md);
     }
 
-    .regular-price-inline {
-        font-size: 0.9rem;
+    .discount-banner {
+        padding: var(--spacing-md) var(--spacing-lg);
+        transform: rotate(0deg);
     }
 
-    .old-price-inline {
-        font-size: 1.2rem;
+    .discount-label-top {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
     }
 
-    .discount-badge {
-        padding: var(--spacing-xs) var(--spacing-md);
+    .discount-percentage {
+        font-size: 2rem;
+    }
+
+    .regular-label {
         font-size: 0.85rem;
+    }
+
+    .regular-amount {
+        font-size: 1.4rem;
     }
 
     .special-price-label {
