@@ -1923,6 +1923,130 @@ details[open] .faq-question::after {
 /* Savings style removed */
 
 /* CTA benefits styles removed - benefits section deleted */
+
+/* New Unified Price Section */
+.price-section-unified {
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(248, 240, 232, 0.95) 50%,
+        rgba(255, 255, 255, 0.98) 100%);
+    border: 3px solid rgba(139, 69, 19, 0.2);
+    border-radius: 24px;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    margin: var(--spacing-xxl) 0;
+    box-shadow: 0 12px 48px rgba(139, 69, 19, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-section-unified::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(218, 165, 32, 0.6) 20%,
+        rgba(139, 69, 19, 0.8) 50%,
+        rgba(218, 165, 32, 0.6) 80%,
+        transparent 100%);
+}
+
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.regular-price-inline {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.old-price-inline {
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    color: var(--text-light);
+    opacity: 0.7;
+    margin-left: var(--spacing-xs);
+}
+
+.discount-badge {
+    background: linear-gradient(135deg,
+        rgba(218, 165, 32, 0.9) 0%,
+        rgba(184, 134, 11, 0.95) 100%);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 16px rgba(218, 165, 32, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.special-price-main {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
+    border-top: 2px solid rgba(139, 69, 19, 0.1);
+    border-bottom: 2px solid rgba(139, 69, 19, 0.1);
+}
+
+.special-price-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 1px;
+}
+
+.special-price-value {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg,
+        var(--primary-color) 0%,
+        var(--gold-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    display: block;
+    text-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+}
+
+.tax-note {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-left: var(--spacing-sm);
+}
+
+.benefits-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.benefit-separator {
+    color: var(--text-light);
+    opacity: 0.5;
+}
     font-size: 1rem;
     padding: var(--spacing-sm) var(--spacing-md);
     background: rgba(212, 165, 116, 0.1);
@@ -4080,5 +4204,54 @@ body::before {
 @media (max-width: 768px) {
     .cta-product-image {
         max-width: 100%;
+    }
+
+    .price-section-unified {
+        padding: var(--spacing-lg) var(--spacing-md);
+        border-radius: 20px;
+    }
+
+    .price-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+
+    .regular-price-inline {
+        font-size: 0.9rem;
+    }
+
+    .old-price-inline {
+        font-size: 1.2rem;
+    }
+
+    .discount-badge {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: 0.85rem;
+    }
+
+    .special-price-label {
+        font-size: 1rem;
+    }
+
+    .special-price-value {
+        font-size: 2.8rem;
+    }
+
+    .tax-note {
+        font-size: 1rem;
+    }
+
+    .benefits-inline {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .benefit-separator {
+        display: none;
+    }
+
+    .benefit-item {
+        font-size: 0.9rem;
     }
 }
