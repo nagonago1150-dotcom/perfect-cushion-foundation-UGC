@@ -1956,98 +1956,58 @@ details[open] .faq-question::after {
 }
 
 .price-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.price-comparison-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--spacing-xl);
+    gap: var(--spacing-lg);
     flex-wrap: wrap;
-    gap: var(--spacing-xl);
-    position: relative;
 }
 
-.discount-banner {
-    background: linear-gradient(135deg,
-        #D4AF37 0%,
-        #FFD700 50%,
-        #D4AF37 100%);
-    padding: var(--spacing-lg) var(--spacing-xxl);
-    border-radius: 16px;
-    box-shadow:
-        0 8px 32px rgba(212, 175, 55, 0.4),
-        inset 0 2px 4px rgba(255, 255, 255, 0.5);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xs);
-    transform: rotate(-2deg);
-    transition: transform 0.3s ease;
-}
-
-.discount-banner:hover {
-    transform: rotate(0deg) scale(1.05);
-}
-
-.discount-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent 30%,
-        rgba(255, 255, 255, 0.3) 50%,
-        transparent 70%
-    );
-    animation: shine 3s infinite;
-}
-
-@keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%); }
-    100% { transform: translateX(100%) translateY(100%); }
-}
-
-.discount-label-top {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #654321;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.discount-percentage {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: white;
-    text-shadow:
-        2px 2px 4px rgba(0, 0, 0, 0.3),
-        -1px -1px 2px rgba(255, 255, 255, 0.5);
-    letter-spacing: 2px;
-    line-height: 1;
-}
-
-.regular-price-display {
+.price-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-xs);
 }
 
-.regular-label {
+.price-tag {
     font-size: 0.9rem;
     color: var(--text-light);
     font-weight: 500;
 }
 
-.regular-amount {
-    font-size: 1.8rem;
+.price-old {
+    font-size: 1.5rem;
     text-decoration: line-through;
     color: var(--text-light);
     opacity: 0.6;
     font-weight: 600;
+}
+
+.price-arrow {
+    font-size: 2rem;
+    color: var(--gold-accent);
+    font-weight: 700;
+}
+
+.discount-highlight {
+    background: linear-gradient(135deg,
+        rgba(218, 165, 32, 0.15) 0%,
+        rgba(218, 165, 32, 0.25) 100%);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 12px;
+    border: 2px solid rgba(218, 165, 32, 0.4);
+}
+
+.discount-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
 }
 
 .special-price-main {
@@ -4270,32 +4230,30 @@ body::before {
         border-radius: 20px;
     }
 
-    .price-header {
+    .price-comparison-row {
         flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
     }
 
-    .discount-banner {
-        padding: var(--spacing-md) var(--spacing-lg);
-        transform: rotate(0deg);
+    .price-arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
     }
 
-    .discount-label-top {
-        font-size: 0.75rem;
-        letter-spacing: 1.5px;
-    }
-
-    .discount-percentage {
-        font-size: 2rem;
-    }
-
-    .regular-label {
+    .price-tag {
         font-size: 0.85rem;
     }
 
-    .regular-amount {
-        font-size: 1.4rem;
+    .price-old {
+        font-size: 1.3rem;
+    }
+
+    .discount-highlight {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .discount-tag {
+        font-size: 1rem;
     }
 
     .special-price-label {
